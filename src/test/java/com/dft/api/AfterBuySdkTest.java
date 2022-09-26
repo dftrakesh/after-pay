@@ -1,7 +1,7 @@
 package com.dft.api;
 
 import com.dft.model.getsolditems.request.Request;
-import com.dft.model.getsolditems.response.Afterbuy;
+import com.dft.model.getsolditems.response.GetSoldItemsResponse;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
@@ -30,7 +30,7 @@ class AfterBuySdkTest {
         Request request = xmlMapper.readValue(getClass().getClassLoader().getResource("test_request.xml"), new TypeReference<>() {
         });
         log.debug("xml: {}", request);
-        Mono<Afterbuy> response = afterBuySDK.getSoldItems(request);
+        Mono<GetSoldItemsResponse> response = afterBuySDK.getSoldItems(request);
         StepVerifier.create(response)
             .consumeNextWith(afterbuy ->
                 log.debug("response size: {}", afterbuy.getResult().getOrders().getOrderList().size())

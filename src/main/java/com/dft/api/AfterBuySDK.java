@@ -5,7 +5,7 @@ import com.dft.api.exception.NotFoundException;
 import com.dft.api.exception.TooManyRequestsException;
 import com.dft.api.exception.UnauthorizedException;
 import com.dft.model.getsolditems.request.Request;
-import com.dft.model.getsolditems.response.Afterbuy;
+import com.dft.model.getsolditems.response.GetSoldItemsResponse;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import lombok.extern.log4j.Log4j2;
@@ -14,7 +14,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.reactive.function.client.ClientResponse;
 import org.springframework.web.reactive.function.client.ExchangeStrategies;
 import org.springframework.web.reactive.function.client.WebClient;
-import org.springframework.web.util.UriBuilder;
 import reactor.core.publisher.Mono;
 
 @Log4j2
@@ -28,13 +27,13 @@ public class AfterBuySDK {
 
     XmlMapper xmlMapper = XmlMapper.xmlBuilder().build();
 
-    public Mono<Afterbuy> getSoldItems(Request request) throws JsonProcessingException {
+    public Mono<GetSoldItemsResponse> getSoldItems(Request request) throws JsonProcessingException {
 
         return webClient.method(HttpMethod.GET)
             .uri("https://api.afterbuy.de/afterbuy/ABInterface.aspx")
             .header("Content-Type", "text/xml; charset=utf-8")
             .bodyValue(writeValueAsString(request))
-            .exchangeToMono(clientResponse -> handleResponse(clientResponse, Afterbuy.class));
+            .exchangeToMono(clientResponse -> handleResponse(clientResponse, GetSoldItemsResponse.class));
     }
 
     private <T> String writeValueAsString(T requestClazz) {
