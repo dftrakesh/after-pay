@@ -56,4 +56,7 @@ public class Order {
 
     @JsonProperty("IsCheckoutConfirmedByCustomer")
     private Integer isCheckoutConfirmedByCustomer;
+
+    @JsonProperty("EbayAccount")
+    private String ebayAccount;
 }

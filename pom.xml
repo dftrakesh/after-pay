@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.dftrakesh</groupId>
-    <artifactId>afterpay-rest</artifactId>
+    <artifactId>afterbuy-rest</artifactId>
     <version>2022.9.22</version>
     <packaging>jar</packaging>
 
-    <name>after-pay</name>
+    <name>after-buy</name>
     <description>AfterPay API using JDK 11</description>
     <url>https://github.com/dftrakesh/shopify-admin-rest</url>
 
@@ -36,7 +36,7 @@
     </developers>
 
     <scm>
-        <url>https://github.com/dftrakesh/afterpay-rest</url>
+        <url>https://github.com/dftrakesh/afterbuy-rest</url>
     </scm>
 
     <properties>

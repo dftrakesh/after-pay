@@ -16,24 +16,24 @@ import reactor.test.StepVerifier;
 import java.io.IOException;
 
 @Log4j2
-@SpringBootTest(classes = AfterPaySDK.class)
+@SpringBootTest(classes = AfterBuySDK.class)
 @RunWith(SpringRunner.class)
-class TestClass {
+class AfterBuySdkTest {
 
     XmlMapper xmlMapper = XmlMapper.xmlBuilder()
         .configure(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT, true).build();
 
-    AfterPaySDK afterPaySDK = new AfterPaySDK();
+    AfterBuySDK afterBuySDK = new AfterBuySDK();
 
     @Test
     public void getSoldItems() throws IOException {
         Request request = xmlMapper.readValue(getClass().getClassLoader().getResource("test_request.xml"), new TypeReference<>() {
         });
         log.debug("xml: {}", request);
-        Mono<Afterbuy> response = afterPaySDK.getSoldItems(request);
+        Mono<Afterbuy> response = afterBuySDK.getSoldItems(request);
         StepVerifier.create(response)
             .consumeNextWith(afterbuy ->
-                log.debug("response: {}", afterbuy)
+                log.debug("response size: {}", afterbuy.getResult().getOrders().getOrderList().size())
             ).verifyComplete();
     }
 }
