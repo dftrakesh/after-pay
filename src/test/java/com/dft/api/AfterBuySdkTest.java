@@ -6,6 +6,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import lombok.extern.log4j.Log4j2;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -26,6 +27,7 @@ class AfterBuySdkTest {
     AfterBuySDK afterBuySDK = new AfterBuySDK();
 
     @Test
+    @Disabled
     public void getSoldItems() throws IOException {
         Request request = xmlMapper.readValue(getClass().getClassLoader().getResource("test_request.xml"), new TypeReference<>() {
         });
@@ -33,7 +35,7 @@ class AfterBuySdkTest {
         Mono<GetSoldItemsResponse> response = afterBuySDK.getSoldItems(request);
         StepVerifier.create(response)
             .consumeNextWith(afterbuy ->
-                log.debug("response size: {}", afterbuy.getResult().getOrders().getOrderList().size())
+                log.debug("response size: {}", afterbuy.getResult().getOrders().getOrderList().get(0))
             ).verifyComplete();
     }
 }
