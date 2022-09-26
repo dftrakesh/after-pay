@@ -10,6 +10,9 @@ public class Address {
     @JsonProperty("AfterbuyUserID")
     private String afterbuyUserID;
 
+    @JsonProperty("AfterbuyUserIDAlt")
+    private String afterbuyUserIDAlt;
+
     @JsonProperty("UserIDPlattform")
     private String userIDPlatform;
 
