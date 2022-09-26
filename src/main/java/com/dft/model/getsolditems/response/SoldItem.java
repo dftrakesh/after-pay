@@ -13,6 +13,30 @@ public class SoldItem {
     @JsonProperty("ItemDetailsDone")
     private String itemDetailsDone;
 
+    @JsonProperty("AlternativeItemNumber1")
+    private String alternativeItemNumber1;
+
+    @JsonProperty("AlternativeItemNumber")
+    private String alternativeItemNumber;
+
+    @JsonProperty("Anr")
+    private String anr;
+
+    @JsonProperty("IsAmazonInvoiced")
+    private String isAmazonInvoiced;
+
+    @JsonProperty("IsExternalInvoice")
+    private String isExternalInvoice;
+
+    @JsonProperty("PlatformSpecificOrderId")
+    private String platformSpecificOrderId;
+
+    @JsonProperty("eBayTransactionID")
+    private Long eBayTransactionID;
+
+    @JsonProperty("eBayPlusTransaction")
+    private String eBayPlusTransaction;
+
     @JsonProperty("IsAmazonPrime")
     private String isAmazonPrime;
 
@@ -34,11 +58,17 @@ public class SoldItem {
     @JsonProperty("ItemPrice")
     private String itemPrice;
 
+    @JsonProperty("ItemOriginalCurrency")
+    private ItemOriginalCurrency itemOriginalCurrency;
+
     @JsonProperty("ItemEndDate")
     private String itemEndDate;
 
     @JsonProperty("TaxRate")
     private String taxRate;
+
+    @JsonProperty("TaxCollectedBy")
+    private Integer taxCollectedBy;
 
     @JsonProperty("ItemWeight")
     private String itemWeight;
@@ -55,6 +85,9 @@ public class SoldItem {
     @JsonProperty("ItemModDate")
     private String itemModDate;
 
-    @JsonProperty("ShopProductDetails")
-    private ShopProductDetails shopProductDetails;
+    @JsonProperty("eBayFeedbackCompleted")
+    private String eBayFeedbackCompleted;
+
+    @JsonProperty("eBayFeedbackReceived")
+    private String eBayFeedbackReceived;
 }
