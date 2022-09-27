@@ -64,4 +64,9 @@ public class Order {
 
     @JsonProperty("OrderOriginalCurrency")
     private OrderOriginalCurrency orderOriginalCurrency;
+
+    /**
+     * Database primary key id
+     */
+    private Long internalOrderId;
 }

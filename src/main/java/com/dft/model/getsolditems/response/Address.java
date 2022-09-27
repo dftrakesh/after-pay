@@ -60,4 +60,14 @@ public class Address {
 
     @JsonProperty("TaxIDNumber")
     private String taxIDNumber;
+
+    /**
+     * Database primary key id
+     */
+    private Long internalAddressId;
+
+    /**
+     * Database Address Type
+     */
+    private String internalAddressType;
 }

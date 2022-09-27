@@ -90,4 +90,9 @@ public class SoldItem {
 
     @JsonProperty("eBayFeedbackReceived")
     private Integer eBayFeedbackReceived;
+
+    /**
+     * Database primary key id
+     */
+    private Long internalItemId;
 }
