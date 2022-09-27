@@ -22,4 +22,7 @@ public class Result {
 
     @JsonProperty("ItemsCount")
     private Integer itemsCount;
+
+    @JsonProperty("ErrorList")
+    private ErrorList errorList;
 }
