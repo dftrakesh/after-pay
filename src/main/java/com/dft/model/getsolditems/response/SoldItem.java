@@ -20,7 +20,7 @@ public class SoldItem {
     private String alternativeItemNumber;
 
     @JsonProperty("Anr")
-    private Long anr;
+    private String anr;
 
     @JsonProperty("IsAmazonInvoiced")
     private String isAmazonInvoiced;

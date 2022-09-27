@@ -17,7 +17,7 @@ public class Order {
     private Long orderId;
 
     @JsonProperty("Anr")
-    private Long anr;
+    private String anr;
 
     @JsonProperty("FeedbackDate")
     private String feedbackDate;
