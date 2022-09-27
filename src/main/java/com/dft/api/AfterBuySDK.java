@@ -27,7 +27,7 @@ public class AfterBuySDK {
 
     XmlMapper xmlMapper = XmlMapper.xmlBuilder().build();
 
-    public Mono<GetSoldItemsResponse> getSoldItems(Request request) throws JsonProcessingException {
+    public Mono<GetSoldItemsResponse> getSoldItems(Request request) {
 
         return webClient.method(HttpMethod.GET)
             .uri("https://api.afterbuy.de/afterbuy/ABInterface.aspx")

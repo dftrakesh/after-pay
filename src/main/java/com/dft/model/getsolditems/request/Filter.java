@@ -14,6 +14,10 @@ import lombok.NoArgsConstructor;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Filter {
 
+    /**
+     * Possible values: RangeID, DateFilter, OrderID, Platform, DefaultFilter, AfterbuyUserID, UserDefinedFlag,
+     *                  AfterbuyUserEmail, ShopId, Day, InvoiceNumber, AlternativeItemNumber1
+     */
     @JsonProperty("FilterName")
     private String filterName;
 

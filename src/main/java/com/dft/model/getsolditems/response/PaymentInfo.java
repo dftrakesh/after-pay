@@ -25,6 +25,9 @@ public class PaymentInfo {
     @JsonProperty("InvoiceDate")
     private String invoiceDate;
 
+    @JsonProperty("PaymentFunction")
+    private String paymentFunction;
+
     @JsonProperty("PaymentData")
     private PaymentData paymentData;
 }

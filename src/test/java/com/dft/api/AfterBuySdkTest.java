@@ -35,7 +35,7 @@ class AfterBuySdkTest {
         Mono<GetSoldItemsResponse> response = afterBuySDK.getSoldItems(request);
         StepVerifier.create(response)
             .consumeNextWith(afterbuy ->
-                log.debug("response size: {}", afterbuy.getResult().getOrders().getOrderList().get(0))
+                log.debug("response size: {}", afterbuy.getResult().getOrders().getOrderList().size())
             ).verifyComplete();
     }
 }

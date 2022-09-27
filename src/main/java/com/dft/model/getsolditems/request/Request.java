@@ -22,6 +22,9 @@ public class Request {
     @JsonProperty("ReturnHiddenItems")
     private Integer returnHiddenItems;
 
+    @JsonProperty("MaxSoldItems")
+    private Integer maxSoldItems;
+
     @JsonProperty("AfterbuyGlobal")
     private AfterbuyGlobal afterbuyGlobal;
 

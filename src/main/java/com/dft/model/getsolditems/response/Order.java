@@ -11,14 +11,13 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Order {
     @JsonProperty("InvoiceNumber")
-    private String invoiceNumber;
+    private Long invoiceNumber;
 
     @JsonProperty("OrderID")
-    @JacksonXmlElementWrapper(useWrapping = false)
-    private List<String> orderIDList;
+    private Long orderId;
 
     @JsonProperty("Anr")
-    private String anr;
+    private Long anr;
 
     @JsonProperty("FeedbackDate")
     private String feedbackDate;
@@ -57,6 +56,12 @@ public class Order {
     @JsonProperty("IsCheckoutConfirmedByCustomer")
     private Integer isCheckoutConfirmedByCustomer;
 
+    @JsonProperty("ContainseBayPlusTransaction")
+    private String containseBayPlusTransaction;
+
     @JsonProperty("EbayAccount")
     private String ebayAccount;
+
+    @JsonProperty("OrderOriginalCurrency")
+    private OrderOriginalCurrency orderOriginalCurrency;
 }

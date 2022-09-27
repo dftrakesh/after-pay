@@ -23,6 +23,9 @@ public class FilterValues {
     @JsonProperty("DateTo")
     private String dateTo;
 
+    @JsonProperty("ValueFrom")
+    private String valueFrom;
+
     @JsonProperty("FilterValue")
     @JacksonXmlElementWrapper(namespace = "FilterValue", useWrapping = false)
     private List<String> filterValueList;

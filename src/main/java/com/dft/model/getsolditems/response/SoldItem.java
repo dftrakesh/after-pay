@@ -8,10 +8,10 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class SoldItem {
     @JsonProperty("ItemID")
-    private String itemID;
+    private Long itemID;
 
     @JsonProperty("ItemDetailsDone")
-    private String itemDetailsDone;
+    private Integer itemDetailsDone;
 
     @JsonProperty("AlternativeItemNumber1")
     private String alternativeItemNumber1;
@@ -20,7 +20,7 @@ public class SoldItem {
     private String alternativeItemNumber;
 
     @JsonProperty("Anr")
-    private String anr;
+    private Long anr;
 
     @JsonProperty("IsAmazonInvoiced")
     private String isAmazonInvoiced;
@@ -86,8 +86,8 @@ public class SoldItem {
     private String itemModDate;
 
     @JsonProperty("eBayFeedbackCompleted")
-    private String eBayFeedbackCompleted;
+    private Integer eBayFeedbackCompleted;
 
     @JsonProperty("eBayFeedbackReceived")
-    private String eBayFeedbackReceived;
+    private Integer eBayFeedbackReceived;
 }

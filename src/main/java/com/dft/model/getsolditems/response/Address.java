@@ -8,10 +8,10 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Address {
     @JsonProperty("AfterbuyUserID")
-    private String afterbuyUserID;
+    private Long afterbuyUserID;
 
     @JsonProperty("AfterbuyUserIDAlt")
-    private String afterbuyUserIDAlt;
+    private Long afterbuyUserIDAlt;
 
     @JsonProperty("UserIDPlattform")
     private String userIDPlatform;
@@ -46,7 +46,7 @@ public class Address {
     @JsonProperty("Country")
     private String country;
 
-    @JsonProperty("countryISO")
+    @JsonProperty("CountryISO")
     private String countryISO;
 
     @JsonProperty("Phone")
