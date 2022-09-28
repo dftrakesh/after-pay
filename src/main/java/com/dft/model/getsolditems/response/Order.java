@@ -11,7 +11,7 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Order {
     @JsonProperty("InvoiceNumber")
-    private Long invoiceNumber;
+    private String invoiceNumber;
 
     @JsonProperty("OrderID")
     private Long orderId;
